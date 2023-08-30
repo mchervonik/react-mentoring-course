@@ -1,31 +1,89 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .App-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 1vmin);
   color: white;
+  z-index: 200;
+}
+
+.App-module {
+  position: relative;
+  top: 60px;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  background-color:dimgray;
+  padding: 5px;
+  margin: 40px;
+  border-radius: 15px;
+}
+
+.App-module.active {
+  background-color:antiquewhite;
+  color:black;
+}
+
+.App-task {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content:flex-start;
+  justify-items: center;
+  margin: 30px;
+}
+
+.App-task-content {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content:flex-start;
+  justify-items: center;
+}
+
+.App-counter-label {
+  margin: 0 10px;
+}
+
+.App-task-header {
+  position: relative;
+  min-width: 50%;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.App-btn {
+  min-width: 40px;
+}
+
+.App-task-title {
+  margin-right: 30px;
+}
+
+.App-genres-list * + * {
+  margin-top: 5px;
+}
+
+.App-genre-item {
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {
